@@ -12,6 +12,11 @@ struct Fraction {
 
     bool operator==(Fraction const& f) const;
     bool operator!=(Fraction const& f) const;
+
+    bool operator<(Fraction const& f) const;
+    bool operator<=(Fraction const& f) const;
+    bool operator>(Fraction const& f) const;
+    bool operator>=(Fraction const& f) const;
 };
 
 std::ostream& operator<<(std::ostream& os, Fraction const& f);

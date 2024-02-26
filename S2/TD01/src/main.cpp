@@ -27,5 +27,10 @@ int main()
 
     std::cout << f1 << " == " << f4 << " : " << (f1 == f4) << std::endl;
 
+    std::cout << f1 << " < " << f2 << " : " << (f1 < f2) << std::endl;
+    std::cout << f1 << " <= " << f4 << " : " << (f1 <= f4) << std::endl;
+    std::cout << f1 << " > " << f4 << " : " << (f1 > f4) << std::endl;
+    std::cout << f1 << " >= " << f4 << " : " << (f1 >= f4) << std::endl;
+
     return 0;
 }

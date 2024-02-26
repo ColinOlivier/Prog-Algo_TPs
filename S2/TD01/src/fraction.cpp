@@ -52,3 +52,20 @@ bool Fraction::operator==(Fraction const& f) const {
 bool Fraction::operator!=(Fraction const& f) const {
     return !(*this == f);
 }
+
+// Exo 04
+bool Fraction::operator<(Fraction const& f) const {
+    return (numerator / static_cast<float>(denominator)) < (f.numerator / static_cast<float>(f.denominator));
+}
+
+bool Fraction::operator<=(Fraction const& f) const {
+    return (*this < f) || (*this == f);
+}
+
+bool Fraction::operator>(Fraction const& f) const {
+    return !(*this <= f);
+}
+
+bool Fraction::operator>=(Fraction const& f) const {
+    return !(*this < f);
+}
