@@ -69,3 +69,24 @@ bool Fraction::operator>(Fraction const& f) const {
 bool Fraction::operator>=(Fraction const& f) const {
     return !(*this < f);
 }
+
+// Exo 05
+Fraction& Fraction::operator+=(Fraction const& f) {
+    *this = *this + f;
+    return *this;
+}
+
+Fraction& Fraction::operator-=(Fraction const& f) {
+    *this = *this - f;
+    return *this;
+}
+
+Fraction& Fraction::operator*=(Fraction const& f) {
+    *this = *this * f;
+    return *this;
+}
+
+Fraction& Fraction::operator/=(Fraction const& f) {
+    *this = *this / f;
+    return *this;
+}

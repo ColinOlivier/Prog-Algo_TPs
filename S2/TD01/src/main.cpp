@@ -32,5 +32,24 @@ int main()
     std::cout << f1 << " > " << f4 << " : " << (f1 > f4) << std::endl;
     std::cout << f1 << " >= " << f4 << " : " << (f1 >= f4) << std::endl;
 
+    std::cout << "f1 : " << f1 << std::endl;
+
+    std::cout << "f1 += " << f2 << std::endl;
+    f1 += f2;
+    std::cout << "f1 : " << f1 << std::endl;
+
+    std::cout << "f1 -= " << f2 << std::endl;
+    f1 -= f2;
+    std::cout << "f1 : " << f1 << std::endl;
+
+    std::cout << "f1 *= " << f2 << std::endl;
+    f1 *= f2;
+    std::cout << "f1 : " << f1 << std::endl;
+
+    std::cout << "f1 /= " << f2 << std::endl;
+    f1 /= f2;
+    std::cout << "f1 : " << f1 << std::endl;
+
+
     return 0;
 }
