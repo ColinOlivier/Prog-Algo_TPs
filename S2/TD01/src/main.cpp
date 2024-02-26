@@ -21,5 +21,11 @@ int main()
 
     std::cout << "1/6 + 2/6 = " << (Fraction{ 1, 6 } + Fraction{ 2, 6 }) << std::endl;
 
+    std::cout << f1 << " == " << f2 << " : " << (f1 == f2) << std::endl;
+
+    Fraction f4{ 6, 8 };
+
+    std::cout << f1 << " == " << f4 << " : " << (f1 == f4) << std::endl;
+
     return 0;
 }
