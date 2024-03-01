@@ -90,3 +90,37 @@ Fraction& Fraction::operator/=(Fraction const& f) {
     *this = *this / f;
     return *this;
 }
+
+//Exo 6
+float Fraction::to_float() const {
+    return numerator / static_cast<float>(denominator);
+}
+
+Fraction::operator float() const {
+    return to_float();
+}
+
+// Aller plus loin
+Fraction Fraction::operator+(int const i) const {
+    return simplify({
+        numerator + (i * denominator),
+        denominator
+        }
+    );
+}
+
+int ceil(Fraction const& f){
+    return floor(f) + 1;
+}
+
+int floor(Fraction const& f){
+    return (f.numerator / f.denominator);
+}
+
+int round(Fraction const& f){
+    int round{floor(f)};
+    if(f.to_float() - round > 0.5f){
+        return round + 1;
+    }
+    return round;;
+}
