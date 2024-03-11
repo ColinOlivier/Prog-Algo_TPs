@@ -4,7 +4,7 @@
 int main()
 {
     Fraction f1{ 3, 4 };
-    Fraction f2{ 1, 2 };
+    Fraction f2{ 5, 2 };
 
     std::cout << "f1 = " << f1 << std::endl;
     std::cout << "f2 = " << f2 << std::endl;
@@ -50,6 +50,10 @@ int main()
     f1 /= f2;
     std::cout << "f1 : " << f1 << std::endl;
 
+    std::cout << "static_cast<float>(f1) : " << static_cast<float>(f1) << std::endl;
+    std::cout << "ceil(f1) : " << ceil(f1) << std::endl;
+    std::cout << "floor(f1) : " << floor(f1) << std::endl;
+    std::cout << "round(f1) : " << round(f1) << std::endl;
 
     return 0;
 }
