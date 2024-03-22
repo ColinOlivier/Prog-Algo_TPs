@@ -51,6 +51,7 @@ int main()
     std::cout << "f1 : " << f1 << std::endl;
 
     std::cout << "static_cast<float>(f1) : " << static_cast<float>(f1) << std::endl;
+    std::cout << "abs(f1) : " << abs(f1) << std::endl;
     std::cout << "ceil(f1) : " << ceil(f1) << std::endl;
     std::cout << "floor(f1) : " << floor(f1) << std::endl;
     std::cout << "round(f1) : " << round(f1) << std::endl;

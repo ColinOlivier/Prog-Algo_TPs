@@ -109,17 +109,21 @@ Fraction Fraction::operator+(int const i) const {
     );
 }
 
-int ceil(Fraction const& f){
+Fraction abs(Fraction const& f) {
+    return Fraction{ abs(f.numerator), abs(f.denominator) };
+}
+
+int ceil(Fraction const& f) {
     return floor(f) + 1;
 }
 
-int floor(Fraction const& f){
+int floor(Fraction const& f) {
     return (f.numerator / f.denominator);
 }
 
-int round(Fraction const& f){
-    int round{floor(f)};
-    if(f.to_float() - round > 0.5f){
+int round(Fraction const& f) {
+    int round{ floor(f) };
+    if (f.to_float() - round > 0.5f) {
         return round + 1;
     }
     return round;;

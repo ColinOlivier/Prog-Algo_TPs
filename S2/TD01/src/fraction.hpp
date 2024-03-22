@@ -2,8 +2,8 @@
 #include <iostream>
 
 struct Fraction {
-    unsigned int numerator;
-    unsigned int denominator;
+    int numerator;
+    int denominator;
 
     Fraction operator+(Fraction const& f) const;
     Fraction operator-(Fraction const& f) const;
@@ -31,6 +31,7 @@ struct Fraction {
 
 std::ostream& operator<<(std::ostream& os, Fraction const& f);
 
+Fraction abs(Fraction const& f);
 int ceil(Fraction const& f);
 int floor(Fraction const& f);
 int round(Fraction const& f);
