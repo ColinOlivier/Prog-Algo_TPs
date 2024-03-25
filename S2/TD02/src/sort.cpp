@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <array>
 #include "sort.hpp"
 #include "utils.hpp"
 
@@ -100,4 +101,25 @@ std::optional<size_t> search(std::vector<int>& vec, int const search_value, size
 
 std::optional<size_t> search(std::vector<int>& vec, int const search_value) {
     return search(vec, search_value, 0, vec.size() - 1);
+}
+
+// Exo Pour aller plus loin
+
+void counting_sort(std::vector<int>& vec, int const max) {
+    std::vector<unsigned int> count_vector(max + 1, 0);
+
+    for (int element : vec)
+        ++count_vector[element];
+
+    vec = {};
+
+    for (size_t i = 0; i < count_vector.size(); i++)
+    {
+        for (size_t j = 0; j < count_vector[i]; j++)
+            vec.push_back(i);
+    }
+}
+
+void counting_sort(std::vector<int>& vec) {
+    counting_sort(vec, *std::max_element(vec.begin(), vec.end()));
 }

@@ -20,6 +20,12 @@ int main()
 
     array = generate_random_vector(10000);
     {
+        ScopedTimer timer("Counting sort timer");
+        counting_sort(array);
+    }
+
+    array = generate_random_vector(10000);
+    {
         ScopedTimer timer("Algorithm sort timer");
         std::sort(array.begin(), array.end());
     }
